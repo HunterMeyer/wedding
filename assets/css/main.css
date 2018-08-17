@@ -2576,6 +2576,8 @@ blockquote {
 /* Main */
 
   #main {
+    /*background: url('../images/pattern.svg') no-repeat top left;*/
+    /*background-size: contain;*/
     background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
     background-position: top left, top right, bottom left, bottom right;
     background-repeat: no-repeat;
