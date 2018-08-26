@@ -40,12 +40,17 @@
 
               <!-- Content -->
                 <div class="content">
+                  <div id="rsvp-thank-you" style="display:none;text-align:center;">
+                    <h2>Thank you!</h2>
+                    <div id="rsvp-confirmation"></div>
+                    We'll be <b>posting pictures</b> to this website following the wedding
+                  </div>
                   <form id="rsvp-form">
                     <div class="row gtr-50">
                       <!-- <div class="col-6 col-12-mobile"> -->
                       <div class="off-2-wide col-8 col-12-mobile">
                         <label for="your_name"><b>Your Name</b>*</label>
-                        <input type="text" name="your_name" placeholder="First and Last" />
+                        <input type="text" name="your_name" placeholder="First and Last" required="true" />
                       </div>
                       <div class="off-2-wide col-8 col-12-mobile">
                         <b>Your meal choice</b>*
@@ -72,8 +77,15 @@
                       </div>
 
                       <div class="col-12" style="text-align:center;margin-top:2rem;">
-                        <ul class="buttons">
-                          <li><input type="submit" class="special" value="Submit RSVP" /></li>
+                        <ul class="buttons" id="rsvp-loading" style="display:none;margin:0;">
+                          <li>
+                            <div class="button" style="padding:0 0.75em;"><i class="icon fa fa-diamond fa-spin"></i></div>
+                          </li>
+                        </ul>
+                        <ul class="buttons" id="rsvp-submit" style="margin:0;">
+                          <li>
+                            <input type="submit" class="special" value="Submit RSVP" />
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -108,15 +120,25 @@
       <script src="assets/js/main.js"></script>
 
       <script type="text/javascript">
-        var $form = $('form#rsvp-form'),
-            url = 'https://script.google.com/macros/s/AKfycbx7phW_aqsD5PK7OTwufRSZMnZYJHGasQLZEEK1HL3KMikzYMk/exec';
+        var url = 'https://script.google.com/macros/s/AKfycbx7phW_aqsD5PK7OTwufRSZMnZYJHGasQLZEEK1HL3KMikzYMk/exec';
+        var form = $('form#rsvp-form');
+        var confirmation = $('#rsvp-confirmation');
 
-        $($form).submit(function(e) {
+        $(form).submit(function(e) {
           e.preventDefault();
+          $('#rsvp-submit').hide();
+          $('#rsvp-loading').show();
           var date = new Date().toISOString();
-          var data = url + '?' + $form.serialize() + '&submitted_on=' + date;
+          var data = url + '?' + form.serialize() + '&submitted_on=' + date;
           $.get(data, function() {
-            alert('done');
+            form.hide();
+            $('#rsvp-thank-you').fadeIn();
+            var coming = $("input[name=will_you_come]:checked").val();
+            if (coming === 'yes') {
+              confirmation.html('We look forward to seeing you!');
+            } else if (coming === 'no') {
+              confirmation.html("We're sorry you're not able to attend");
+            }
           }, 'json');
         });
       </script>
