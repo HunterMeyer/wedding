@@ -76,8 +76,7 @@
 			// 		.css('transition', 'none');
 
 	// Header.
-		if (!browser.mobile
-		&&	$header.hasClass('alt')
+		if ($header.hasClass('alt')
 		&&	$banner.length > 0) {
 
 			$window.on('load', function() {
