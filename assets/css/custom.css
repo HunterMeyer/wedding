@@ -1,0 +1,19 @@
+@media screen and (max-width: 840px) {
+  #header { display: block; }
+}
+
+@media screen and (max-width: 736px) {
+  #header {
+    display: block;
+    height: 48px;
+  }
+
+  #header #logo {
+    display: none;
+  }
+
+  #header #nav {
+    right: 1em;
+    width: 100%;
+  }
+}
