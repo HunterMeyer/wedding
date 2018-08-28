@@ -16,140 +16,148 @@
   </head>
   <body class="contact is-preload">
     <div id="page-wrapper">
+      <header id="header">
+        <h1 id="logo">
+          <a href="index.html">
+            <div class="logo-name">Megan & Hunter <span>Wedding</span></div>
+            <img src="favicon.ico" class="logo-icon" />
+          </a>
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="details.html">Details</a></li>
+            <li class="current"><a href="rsvp.html">RSVP</a></li>
+          </ul>
+        </nav>
+      </header>
 
-      <!-- Header -->
-        <header id="header">
-          <h1 id="logo">
-            <a href="index.html">
-              <div class="logo-name">Megan & Hunter <span>Wedding</span></div>
-              <img src="favicon.ico" class="logo-icon" />
-            </a>
-          </h1>
-          <nav id="nav">
-            <ul>
-              <li><a href="index.html">Welcome</a></li>
-              <li><a href="details.html">Details</a></li>
-              <li class="current"><a href="rsvp.html">RSVP</a></li>
-            </ul>
-          </nav>
+      <article id="main">
+        <header class="special container">
+          <span class="icon fa-calendar text-gold"></span>
+          <h2 class="text-gold">Please RSVP before January 1, 2019</h2>
         </header>
 
-      <!-- Main -->
-        <article id="main">
-
-          <header class="special container">
-            <span class="icon fa-calendar"></span>
-            <h2>Please RSVP before January 1, 2019</h2>
-          </header>
-
-          <!-- One -->
-            <section class="wrapper style4 container medium">
-
-              <!-- Content -->
-                <div class="content">
-                  <div id="rsvp-thank-you" style="display:none;text-align:center;">
-                    <h2>Thank you!</h2>
-                    <div id="rsvp-confirmation"></div>
-                    We'll be <b>posting pictures</b> to this website following the wedding
-                  </div>
-                  <form id="rsvp-form">
-                    <div class="row gtr-50">
-                      <!-- <div class="col-6 col-12-mobile"> -->
-                      <div class="off-2-wide col-8 col-12-mobile">
-                        <label for="your_name"><b>Your Name</b>*</label>
-                        <input type="text" name="your_name" placeholder="First and Last" required="true" />
-                      </div>
-                      <div class="off-2-wide col-8 col-12-mobile">
-                        <b>Your meal choice</b>*
-                        <label><input type="radio" name="your_meal_choice" value="chicken" /> Chicken</label>
-                        <label><input type="radio" name="your_meal_choice" value="fish" /> Fish</label>
-                        <label><input type="radio" name="your_meal_choice" value="steak" /> Steak</label>
-                      </div>
-
-                      <div class="off-2-wide col-8 col-12-mobile">
-                        <label for="plus_one"><b>Plus One</b></label>
-                        <input type="text" name="plus_one" id="plus_one" placeholder="First and Last" />
-                      </div>
-                      <div class="off-2-wide col-8 col-12-mobile">
-                        <b>Plus one meal choice</b>
-                        <label><input type="radio" name="plus_one_meal_choice" value="chicken" /> Chicken</label>
-                        <label><input type="radio" name="plus_one_meal_choice" value="fish" /> Fish</label>
-                        <label><input type="radio" name="plus_one_meal_choice" value="steak" /> Steak</label>
-                      </div>
-
-                      <div class="off-2-wide col-8 col-12-mobile">
-                        <b>Will you be attending?</b>*
-                        <label><input type="radio" name="will_you_come" value="yes" /> Yes, can't wait!</label>
-                        <label><input type="radio" name="will_you_come" value="no" /> No, unfortunately.</label>
-                      </div>
-
-                      <div class="col-12" style="text-align:center;margin-top:2rem;">
-                        <ul class="buttons" id="rsvp-loading" style="display:none;margin:0;">
-                          <li>
-                            <div class="button" style="padding:0 0.75em;"><i class="icon fa fa-diamond fa-spin"></i></div>
-                          </li>
-                        </ul>
-                        <ul class="buttons" id="rsvp-submit" style="margin:0;">
-                          <li>
-                            <input type="submit" class="special" value="Submit RSVP" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </form>
+        <section class="wrapper style4 container medium shadow">
+          <!-- Content -->
+          <div class="content">
+            <div id="rsvp-thank-you" style="display:none;text-align:center;">
+              <h2>Thank you!</h2>
+              <div id="rsvp-confirmation"></div>
+              We'll be <b>posting pictures</b> to this website following the wedding
+            </div>
+            <form id="rsvp-form">
+              <div class="row gtr-50">
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <label for="your_name"><b>Your Name</b>*</label>
+                  <input type="text" name="your_name" placeholder="First and Last" required="true" />
                 </div>
 
-            </section>
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <b>Will you be Attending?</b>*
+                  <label><input type="radio" name="will_you_come" value="yes" /> Yes, can't wait!</label>
+                  <label><input type="radio" name="will_you_come" value="no" /> No, unfortunately.</label>
+                </div>
+              </div>
 
-        </article>
+              <div class="row gtr-50" id="rsvp-more-fields" style="display:none;margin-top:0;">
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <b>Your Meal Choice</b>*
+                  <label><input type="radio" name="your_meal_choice" value="chicken" /> Chicken</label>
+                  <label><input type="radio" name="your_meal_choice" value="fish" /> Fish</label>
+                  <label><input type="radio" name="your_meal_choice" value="steak" /> Steak</label>
+                </div>
 
-      <!-- Footer -->
-        <footer id="footer">
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <label for="plus_one"><b>Plus One</b></label>
+                  <input type="text" name="plus_one" id="plus_one" placeholder="First and Last" />
+                </div>
 
-          <ul class="copyright">
-            <li><i class="fa fa-heart"></i></li>
-            <li>Megan & Hunter</li>
-          </ul>
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <b>Plus One Meal Choice</b>
+                  <label><input type="radio" name="plus_one_meal_choice" value="chicken" /> Chicken</label>
+                  <label><input type="radio" name="plus_one_meal_choice" value="fish" /> Fish</label>
+                  <label><input type="radio" name="plus_one_meal_choice" value="steak" /> Steak</label>
+                </div>
 
-        </footer>
+                <div class="off-2-wide col-8 col-12-mobile">
+                  <label for="song_choice"><b>Songs you'll Dance to</b></label>
+                  <input type="text" name="song_choice" id="song_choice" />
+                </div>
+              </div>
 
+              <div class="col-12" style="text-align:center;margin-top:2rem;">
+                <ul class="buttons" id="rsvp-loading" style="display:none;margin:0;">
+                  <li>
+                    <div class="button" style="padding:0 0.75em;"><i class="icon fa fa-diamond fa-spin"></i></div>
+                  </li>
+                </ul>
+                <ul class="buttons" id="rsvp-submit" style="margin:0;">
+                  <li>
+                    <input type="submit" class="special" value="Submit RSVP" />
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </section>
+      </article>
+
+      <footer id="footer">
+        <ul class="copyright">
+          <li><i class="fa fa-heart"></i></li>
+          <li>Megan & Hunter</li>
+        </ul>
+      </footer>
     </div>
 
     <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.dropotron.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/jquery.scrollgress.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollgress.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-      <script type="text/javascript">
-        var url = 'https://script.google.com/macros/s/AKfycbx7phW_aqsD5PK7OTwufRSZMnZYJHGasQLZEEK1HL3KMikzYMk/exec';
-        var form = $('form#rsvp-form');
-        var confirmation = $('#rsvp-confirmation');
+    <script type="text/javascript">
+      var url = 'https://script.google.com/macros/s/AKfycbx7phW_aqsD5PK7OTwufRSZMnZYJHGasQLZEEK1HL3KMikzYMk/exec';
+      var form = $('form#rsvp-form');
+      var confirmation = $('#rsvp-confirmation');
+      var moreFields = $('#rsvp-more-fields');
 
-        $(form).submit(function(e) {
-          e.preventDefault();
-          $('#rsvp-submit').hide();
-          $('#rsvp-loading').show();
-          var date = new Date().toISOString();
-          var data = url + '?' + form.serialize() + '&submitted_on=' + date;
-          $.get(data, function() {
-            form.hide();
-            $('#rsvp-thank-you').fadeIn();
-            var coming = $("input[name=will_you_come]:checked").val();
-            if (coming === 'yes') {
-              confirmation.html('We look forward to seeing you!');
-            } else if (coming === 'no') {
-              confirmation.html("We're sorry you're not able to attend");
-            }
-          }, 'json');
-        });
-      </script>
+      $('input[name=will_you_come]').change(function() {
+        if ($(this).val() === 'yes') {
+          moreFields.fadeIn();
+        } else {
+          moreFields.fadeOut();
+        }
+      });
 
-      <style>label { display: block; }</style>
+      $(form).submit(function(e) {
+        e.preventDefault();
+        $('#rsvp-submit').hide();
+        $('#rsvp-loading').show();
+        var date = new Date().toISOString();
+        var data = url + '?' + form.serialize() + '&submitted_on=' + date;
+        $.get(data, function() {
+          form.hide();
+          $('#rsvp-thank-you').fadeIn();
+          var coming = $('input[name=will_you_come]:checked').val();
+          if (coming === 'yes') {
+            confirmation.html('We look forward to seeing you!');
+          } else if (coming === 'no') {
+            confirmation.html("We're sorry you're not able to attend");
+          }
+        }, 'json');
+      });
+    </script>
+
+    <!-- Styles -->
+    <style>
+      label { display: block; }
+    </style>
   </body>
 </html>
