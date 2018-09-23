@@ -92,9 +92,9 @@
                     <div class="button" style="padding:0 0.75em;"><i class="icon fa fa-diamond fa-spin"></i></div>
                   </li>
                 </ul>
-                <ul class="buttons" id="rsvp-submit" style="margin:0;">
+                <ul class="buttons" style="margin:0;">
                   <li>
-                    <input type="submit" class="special" value="Submit RSVP" />
+                    <input type="submit" class="special" value="Submit RSVP" id="rsvp-submit" style="display: none;"/>
                   </li>
                 </ul>
               </div>
@@ -126,8 +126,10 @@
       var form = $('form#rsvp-form');
       var confirmation = $('#rsvp-confirmation');
       var moreFields = $('#rsvp-more-fields');
+      var formSubmit = $('#rsvp-submit');
 
       $('input[name=will_you_come]').change(function() {
+        formSubmit.fadeIn();
         if ($(this).val() === 'yes') {
           moreFields.fadeIn();
         } else {
