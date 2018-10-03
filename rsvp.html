@@ -162,6 +162,7 @@
           } else if (coming === 'no') {
             confirmation.html("We're sorry you're not able to attend");
           }
+          $('html, body').animate({scrollTop:0}, 'slow');
         }, 'json');
       });
     </script>
