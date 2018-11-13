@@ -2,8 +2,13 @@ body { background: #f9f9f9; }
 .text-gold { color: #bb9f4e; }
 a.text-gold:hover { color: #9c7d22; }
 
-header.special:before, header.special:after,
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+header.special:before,
+header.special:after,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
   border-color: #bb9f4e;
 }
 
