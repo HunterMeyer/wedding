@@ -174,34 +174,40 @@
                   <header>
                     <h3 class="text-gold">About <strong>the Venue</strong></h3>
                   </header>
-                  <p style="margin-bottom:8px;">
-                    The Villas of Grand Cypress is a resort wedding venue located in Orlando,
-                    Florida. This highly-rated Orlando family golf resort features idyllic
-                    ceremony locations, elegant reception venues, and unrivaled service to make
-                    our day nothing short of spectacular. Revel in The Villas of Grand Cypress’s
-                    natural beauty and luxurious setting; you’ll find the planning, décor, cuisine
-                    and services are all exquisite at this breathtaking venue.
-                  </p>
-                  <p style="margin-bottom:8px;">
-                    <b class="text-gold">Rooms, Features, and Amenities</b>
-                    <br>
-                    The Villas of Grand Cypress is an oasis in the midst of the Orlando fun,
-                    offering lavish accommodations with all the comforts of home. Enjoy oversized
-                    accommodations with spacious suites and villas of up to four bedrooms with
-                    full kitchens, living and dining areas. All rooms are within walking distance
-                    to the resort pool and sauna. Resort activities include 45 holes at the
-                    Jack Nicklaus signature designed golf course, golf instruction, a fitness
-                    center, swimming pool, sauna, hot tub, complimentary bicycles, nature trails,
-                    fishing poles and tackle, and in-room spa services.
-                  <p style="margin-bottom:8px;">
-                    <b class="text-gold">Location</b>
-                    <br>
-                    The Villas of Grand Cypress is located just minutes away from Orlando’s famed
-                    theme parks and attractions. They offer complimentary transportation to Walt
-                    Disney World, Universal Orlando and SeaWorld Orlando. They also offer a shuttle
-                    to nearby attractions, such as the Marilyn Monroe Spa, Pitch ‘n Putt Golf, Rock
-                    Wall, Lake Windsong water sports, Game Room and additional dining options.
-                  </p>
+                  <div id="about-venue">
+                    <p style="margin-bottom:8px;">
+                      The Villas of Grand Cypress is a resort wedding venue located in Orlando,
+                      Florida. This highly-rated Orlando family golf resort features idyllic
+                      ceremony locations, elegant reception venues, and unrivaled service to make
+                      our day nothing short of spectacular. Revel in The Villas of Grand Cypress’s
+                      natural beauty and luxurious setting; you’ll find the planning, décor, cuisine
+                      and services are all exquisite at this breathtaking venue.
+                    </p>
+                    <p style="margin-bottom:8px;">
+                      <b class="text-gold">Rooms, Features, and Amenities</b>
+                      <br>
+                      The Villas of Grand Cypress is an oasis in the midst of the Orlando fun,
+                      offering lavish accommodations with all the comforts of home. Enjoy oversized
+                      accommodations with spacious suites and villas of up to four bedrooms with
+                      full kitchens, living and dining areas. All rooms are within walking distance
+                      to the resort pool and sauna. Resort activities include 45 holes at the
+                      Jack Nicklaus signature designed golf course, golf instruction, a fitness
+                      center, swimming pool, sauna, hot tub, complimentary bicycles, nature trails,
+                      fishing poles and tackle, and in-room spa services.
+                    </p>
+                    <p style="margin-bottom:8px;">
+                      <b class="text-gold">Location</b>
+                      <br>
+                      The Villas of Grand Cypress is located just minutes away from Orlando’s famed
+                      theme parks and attractions. They offer complimentary transportation to Walt
+                      Disney World, Universal Orlando and SeaWorld Orlando. They also offer a shuttle
+                      to nearby attractions, such as the Marilyn Monroe Spa, Pitch ‘n Putt Golf, Rock
+                      Wall, Lake Windsong water sports, Game Room and additional dining options.
+                    </p>
+                  </div>
+                  <div class="show-more text-gold" data-show-more="#about-venue">
+                    Show More
+                  </div>
                 </section>
               </div>
             </div>
@@ -226,6 +232,25 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      var showMore = $($('.show-more').attr('data-show-more'));
+      var originalHeight = showMore.height();
+      showMore.css({ 'height' : '210px', 'overflow' : 'hidden' });
+
+      $('.show-more').click(function() {
+        var target = $(this);
+        target.toggleClass('open');
+        if (target.hasClass('open')) {
+          showMore.animate({ height: originalHeight }, 500, function() {
+            target.text('Show Less');
+          });
+        } else {
+          showMore.animate({ height: 210 }, 500, function() {
+            target.text('Show More');
+          });
+        }
+      });
+    </script>
 
     <!-- Styles -->
     <style type="text/css">
@@ -233,6 +258,16 @@
         font-size: 0.5em;
         min-width: 14em;
         padding: 0;
+      }
+      .show-more:hover {
+        background: linear-gradient(to right, #ffffff 0%,#f9f9f9 15%,#f9f9f9 85%,#ffffff 100%);
+      }
+      .show-more {
+        box-shadow: 0px -18px 18px -18px rgba(0, 0, 0, 0.35);
+        cursor: pointer;
+        margin: 0 -1rem;
+        padding: 1rem;
+        text-align: center;
       }
     </style>
   </body>
